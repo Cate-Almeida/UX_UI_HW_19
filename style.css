@@ -127,7 +127,7 @@ li:hover {
     overflow: hidden;
 }
 
-}
+
 
 #mySkills h1 {
     text-align:center;
@@ -260,6 +260,30 @@ gap: 10px;
     background-color:#df9ef1;
 }
 
+#letsConnect .heading-connect, .email-form { 
+    width: 100%;
+    margin: auto;
+    background-color:#f6ecf5;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    box-shadow:  2px 1px 1px #5b3b653b;
+
+}
+
+.submit-button {
+    border: none;
+    margin: 25px;
+    color: rgb(248, 238, 253);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color:#ba85c9;
+    border-radius: 20px;
+
 footer {
     background-color: #220928;
     color: rgba(255, 255, 255, 0.548);
@@ -273,3 +297,31 @@ footer ul {
     display: inline-block;
     vertical-align: top;
 }
+@media only screen and (max-width:600px) {
+    .flexContainer {
+        flex-direction: cloumn;
+    }
+    .flexContainer > div {
+        width:100%;
+    }
+
+    #categoryGrid {
+        margin: 0px 5%;
+        display: grid;
+        grid-template-rows: 300px 300px 300px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header header header"
+        "content content content"
+        "footer footer footer";
+    }
+
+    #categoryGrid {
+        grid-template-rows: 300px 300px 300px
+        300px 300px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header"
+        "content"
+        "footer";
+     }
