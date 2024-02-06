@@ -135,6 +135,12 @@ li:hover {
     text-align:center;
 } 
 
+#mySkills h3 { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #mySkills .flexContainer {
     display: flex;
     flex-direction: row;
