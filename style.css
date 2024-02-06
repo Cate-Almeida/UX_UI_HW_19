@@ -1,6 +1,6 @@
 
 body {
-    font-family: 'Futura', sans-serif;
+    font-family: 'helvetica', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -107,7 +107,9 @@ li:hover {
     display: inline-block;
     font-size: 16px;
     background-color:#ba85c9;
-    border-radius: 7px;
+    border-radius: 10px;
+    max-width: 80%;
+    align-self: center;
 }
 
 #heroImg button:hover {
@@ -175,9 +177,13 @@ flex-direction: column;
 gap: 10px;
 }
 
+.work-card h4 {
+    font-size: larger;
+}
+
 .work-card {
     box-shadow: 2px 2px 6px #0004;
-    border-radius: 8px;
+    border-radius: 30px;
     display: flex;
     flex-direction: row;
 }
@@ -196,6 +202,11 @@ gap: 10px;
     margin: 0px;
 }
 
+.work-card p {
+
+    padding-top: 10%;
+}
+
 #elapse-button{
     border: none;
     background-color: transparent;
@@ -204,6 +215,7 @@ gap: 10px;
     border-radius: 4px;
     color:#f6ecf5;
     font-size: 16px;
+    padding: 10px;
 }
 
 #elapse-button:hover {
@@ -220,6 +232,8 @@ gap: 10px;
     border-radius: 4px;
     color:#f6ecf5;
     font-size: 16px;
+    padding: 10px;
+
 }
 
 #ppp-button:hover {
@@ -236,6 +250,7 @@ gap: 10px;
     border-radius: 4px;
     color:#f6ecf5;
     font-size: 16px;
+    padding: 10px;
 }
 
 #nsa-button:hover {
@@ -260,15 +275,62 @@ gap: 10px;
     background-color:#df9ef1;
 }
 
+#letsConnect {
+    padding-left: 15vw;
+    padding-right: 15vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#letsConnect h1 {
+    text-align: center;
+    font-size:x-large;
+}
+
 #letsConnect .heading-connect, .email-form { 
-    width: 100%;
+    width: 75%;
     margin: auto;
     background-color:#f6ecf5;
     display: flex;
     flex-direction: column;
     padding: 20px;
     justify-content: center;
-    box-shadow:  2px 1px 1px #5b3b653b;
+    box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.144);
+
+}
+
+#letsConnect .heading-connect {
+    text-align: center;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 20px;
+    color:#471f52
+}
+
+.text-field {
+    height: auto;
+    text-align: justify;
+    object-fit: none;
+    object-position: 0% 0%;
+    background-clip: padding-box;
+    border: 1px solid rgba(49, 49, 49, 0);
+    border-radius: 8px;
+    padding: 12px 28px 11px;
+    overflow: auto
+}
+
+.text-area-field {
+    height: auto;
+    text-align: justify;
+    object-fit: none;
+    object-position: 0% 0%;
+    background-clip: padding-box;
+    border: 1px solid rgba(49, 49, 49, 0);
+    border-radius: 8px;
+    margin-bottom: 0;
+    padding: 12px 28px 99px;
+    overflow: auto;
+    font-family: helvetica;
 
 }
 
@@ -283,6 +345,21 @@ gap: 10px;
     font-size: 16px;
     background-color:#ba85c9;
     border-radius: 20px;
+}
+
+.submit-button:hover {
+    cursor: pointer;
+    background-color:#df9ef1;
+}
+
+
+.field-label, .field-label-2, .field-label-3, .field-label-4 {
+    padding: 15px 32px;
+    font-weight: bold;
+}
+
+
+
 
 footer {
     background-color: #220928;
@@ -297,13 +374,15 @@ footer ul {
     display: inline-block;
     vertical-align: top;
 }
-@media only screen and (max-width:600px) {
+
+@media only screen and (max-width: 600px) {
     .flexContainer {
-        flex-direction: cloumn;
+        flex-direction: column;
     }
     .flexContainer > div {
-        width:100%;
+        width: 100%;
     }
+
 
     #categoryGrid {
         margin: 0px 5%;
@@ -311,17 +390,25 @@ footer ul {
         grid-template-rows: 300px 300px 300px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
-        "header header header"
-        "content content content"
-        "footer footer footer";
+            "header header header"
+            "content content content"
+            "footer footer footer";
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    #profile-picture {
+        max-height: 200px;
+        width: auto;
     }
 
     #categoryGrid {
-        grid-template-rows: 300px 300px 300px
-        300px 300px;
+        grid-template-rows: 300px 300px 300px 300px 300px;
         grid-template-columns: 1fr;
         grid-template-areas:
-        "header"
-        "content"
-        "footer";
-     }
+            "header"
+            "content"
+            "footer";
+    }
+}
